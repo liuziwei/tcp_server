@@ -47,7 +47,7 @@ func (c *Client) SendBytes(b []byte) error {
 	return err
 }
 
-func (c *Client) Close() error {
+func (c *Client) Close() error {b(
 	return c.conn.Close()
 }
 
@@ -83,7 +83,7 @@ func (s *server) Listen() {
 		go client.listen()
 		s.onNewClientCallback(client)
 	}
-}
+} 
 
 // Creates new tcp server instance
 func New(address string) *server {
